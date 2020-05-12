@@ -1,0 +1,27 @@
+plugins {
+    id "org.jetbrains.intellij" version "0.4.9"
+    id "java-library"
+    id "io.freefair.lombok" version "4.1.6"
+    id "idea"
+}
+
+group 'de.tecipe'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenCentral()
+}
+
+intellij {
+    version '2020.1'
+    plugins 'git4idea'
+}
+
+patchPluginXml {
+    changeNotes """
+      Add change notes here. <br>"""
+}

@@ -1,0 +1,25 @@
+/build/
+/bin/
+/out/
+/target/
+/log/
+
+/.gradle
+!/.gitignore
+!/.gitattributes
+!**/src/main/**
+!**/src/test/**
+**/*.log
+**/*.hprof
+lombok.config
+
+### Gradle ###
+!gradle/wrapper/gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
+!/.idea
+/.idea/*
+!/.idea/runConfigurations

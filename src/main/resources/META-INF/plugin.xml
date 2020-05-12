@@ -1,0 +1,56 @@
+<idea-plugin>
+    <id>de.tecipe</id>
+    <name>git-crypt</name>
+    <version>1.0-SNAPSHOT</version>
+    <vendor email="support@tecipe.de" url="http://www.tecipe.de">Tecipe</vendor>
+
+    <description><![CDATA[
+    my demo idea ddasdasdadadadsadasdasdasdasdasda
+    ]]></description>
+
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService
+                serviceImplementation="de.tecipe.gitcrypt.ui.config.application.GitCryptApplicationSettings"/>
+        <projectService serviceImplementation="de.tecipe.gitcrypt.ui.config.project.GitCryptProjectSettings"/>
+
+        <applicationConfigurable
+                instance="de.tecipe.gitcrypt.ui.config.application.GitCryptApplicationSettingsConfigurable"
+                id="git-crypt.settings"/>
+
+        <projectConfigurable instance="de.tecipe.gitcrypt.ui.config.project.GitCryptProjectSettingsConfigurable"
+                             id="git-crypt-project.settings" nonDefaultProject="true"/>
+
+        <statusBarWidgetFactory implementation="de.tecipe.gitcrypt.ui.GitCryptWidgetFactory"
+                                id="de.tecipe.gitcrypt.ui.GitCryptWidgetFactory"
+                                order="first"/>
+    </extensions>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+    <depends>Git4Idea</depends>
+
+    <actions>
+        <group id="git-crypt.Unlock" text="git-crypt lock/unlock" description="Click to unlock">
+            <add-to-group group-id="Git.Menu"/>
+            <action class="de.tecipe.gitcrypt.GitCryptAction" id="git-crypt.Actions.Unlock"
+                    text="git-crypt lock/unlock"/>
+        </group>
+        <group id="git-crypt.ForceKey" text="git-crypt force key" description="Click to force your key to the git-crypt settings, could help fixing your repository">
+            <add-to-group group-id="Git.Menu"/>
+            <action class="de.tecipe.gitcrypt.GitCryptForceKeyAction" id="git-crypt.Actions.ForceKey"
+                    text="git-crypt force key"/>
+        </group>
+        <group id="git-crypt.AddFile" text="git-crypt add file" description="Click to handle file as encrypted file">
+            <add-to-group group-id="Git.ContextMenu"/>
+            <action class="de.tecipe.gitcrypt.GitCryptAddAction" id="git-crypt.Actions.AddFile"
+                    text="git-crypt add file"/>
+        </group>
+    </actions>
+
+</idea-plugin>
