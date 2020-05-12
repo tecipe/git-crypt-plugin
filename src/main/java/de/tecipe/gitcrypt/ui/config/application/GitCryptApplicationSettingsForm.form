@@ -85,8 +85,8 @@
             </constraints>
             <properties>
               <model>
-                <item value="black (default)"/>
-                <item value="red"/>
+                <item value="black"/>
+                <item value="red (default)"/>
                 <item value="blue"/>
                 <item value="disabled"/>
               </model>

@@ -25,7 +25,7 @@ public class GitCryptApplicationSettings implements PersistentStateComponent<Ele
   public static final String UNLOCKEDICONOPTION = "UNLOCKEDICONOPTION";
   private String keyPath = "";
   private String gitCryptPath = "";
-  private IconOptions lockedIconOption = IconOptions.BLACK;
+  private IconOptions lockedIconOption = IconOptions.RED;
   private IconOptions unlockedIconOption = IconOptions.BLACK;
   private long refreshIntervalInMs = 1000;
 
@@ -38,7 +38,7 @@ public class GitCryptApplicationSettings implements PersistentStateComponent<Ele
   public void loadState(Element state) {
     keyPath = state.getAttributeValue(KEYPATH, "");
     gitCryptPath = state.getAttributeValue(GITCRYPTPATH, "");
-    lockedIconOption = IconOptions.valueOf(state.getAttributeValue(LOCKEDICONOPTION, IconOptions.BLACK.name()));
+    lockedIconOption = IconOptions.valueOf(state.getAttributeValue(LOCKEDICONOPTION, IconOptions.RED.name()));
     unlockedIconOption = IconOptions.valueOf(state.getAttributeValue(UNLOCKEDICONOPTION, IconOptions.BLACK.name()));
   }
 
