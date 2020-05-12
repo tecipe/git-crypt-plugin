@@ -21,7 +21,3 @@ intellij {
     plugins 'git4idea'
 }
 
-patchPluginXml {
-    changeNotes """
-      Add change notes here. <br>"""
-}
