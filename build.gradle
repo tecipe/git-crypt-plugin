@@ -1,7 +1,7 @@
 plugins {
-    id "org.jetbrains.intellij" version "0.4.9"
+    id "org.jetbrains.intellij" version "0.4.21"
     id "java-library"
-    id "io.freefair.lombok" version "4.1.6"
+    id "io.freefair.lombok" version "5.1.1"
     id "idea"
 }
 
@@ -17,7 +17,7 @@ repositories {
 }
 
 intellij {
-    version '2020.1'
+    version '2020.2'
     plugins 'git4idea'
 }
 
