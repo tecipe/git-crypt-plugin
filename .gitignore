@@ -11,6 +11,7 @@
 !**/src/test/**
 **/*.log
 **/*.hprof
+**/.DS_Store
 lombok.config
 
 ### Gradle ###
