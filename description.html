@@ -1,23 +1,43 @@
 <p>This Intellij IDEA Plugin makes life with git-crypt way better </p>
-<strong>Release (RELEASE_DATETIME)</strong>
-<h2 id="how-to-use-it">How to use it</h2>
-<h3 id="prerequisite">Prerequisite</h3>
+<br/>
+<br/>
+<strong>How to use it</strong>
+<br/>
+<br/>
+<strong>Prerequisite</strong>
+<br/>
 <p>You need to install git-crypt on your system.</p>
-<h3 id="configure-git-crypt-program-path">Configure git-crypt program path</h3>
-<p>Click on the &#39;git-crypt&#39; widget in the toolbar at the bottom of Intellij.<br>In the popup menu that opens click on &#39;git-crypt configure program path&#39;
-    to open the settings.<br>Now set the path to your git-crypt program location.</p>
+<br/>
+<br/>
+<strong>Configure git-crypt program path</strong>
+<br/>
+<p>Click on the &#39;git-crypt&#39; widget in the toolbar at the bottom of Intellij.<br/>In the popup menu that opens click on &#39;git-crypt configure program path&#39;
+    to open the settings.<br/>Now set the path to your git-crypt program location.</p>
+<br/>
 <p>You will also find the settings under <code>Preferences -&gt; Other Settings -&gt; git-crypt global</code></p>
-<h3 id="configure-git-crypt-key-path">Configure git-crypt key path</h3>
-<p>To lock/unlock your repo you will need to configure the correct key.<br>You can do that clicking on the &#39;git-crypt&#39; widget in the toolbar at the bottom of Intellij.<br>In the popup menu that opens click on &#39;git-crypt configure project key&#39;
-    to open the project settings.<br>Now you can set the path to your git-crypt key location for the <strong>current project</strong>.<br>If you prefer to set the path globally you need to navigate to <code>Preferences -&gt; Other Settings -&gt; git-crypt global</code>
+<br/>
+<br/>
+<strong>Configure git-crypt key path</strong>
+<br/>
+<p>To lock/unlock your repo you will need to configure the correct key.<br/>You can do that clicking on the &#39;git-crypt&#39; widget in the toolbar at the bottom of Intellij.<br/>In the popup menu that opens click on &#39;git-crypt configure project key&#39;
+    to open the project settings.<br/>Now you can set the path to your git-crypt key location for the <strong>current project</strong>.<br/>If you prefer to set the path globally you need to navigate to <code>Preferences -&gt; Other Settings -&gt; git-crypt global</code>
     and set the path to your key here.</p>
-<h3 id="features">Features</h3>
+<br/>
+<br/>
+<strong>Features</strong>
+<br/>
 <ul>
     <li>unlock</li>
     <li>lock</li>
     <li>force key</li>
 </ul>
-<h4 id="unlock-lock">Unlock/Lock</h4>
+<br/>
+<br/>
+<strong>Unlock/Lock</strong>
+<br/>
 <p>This should be self explanatory</p>
-<h4 id="force-key-fix-corrupted-encrypted-file">Force Key / Fix corrupted encrypted file</h4>
-<p>Unluckily Git-crypt has a bug where encrypted files get corrupted when unlocked with a wrong key. Now that the file has been changed you have local changes.<br>If you try to revert the wrong encrypted files you will get a filter-error because the key is also needed to reverse the correct file.<br>To solve this problem you have to set the correct key in the preferences and force the key into the .git directory with the <code>git-crypt force key</code> feature.<br>After that you can revert the process because now the right key is used for the filter.</p>
+<br/>
+<br/>
+<strong>Force Key / Fix corrupted encrypted file</strong>
+<br/>
+<p>Unluckily Git-crypt has a bug where encrypted files get corrupted when unlocked with a wrong key. Now that the file has been changed you have local changes.<br/>If you try to revert the wrong encrypted files you will get a filter-error because the key is also needed to reverse the correct file.<br/>To solve this problem you have to set the correct key in the preferences and force the key into the .git directory with the <code>git-crypt force key</code> feature.<br/>After that you can revert the process because now the right key is used for the filter.</p>
