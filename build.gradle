@@ -5,6 +5,7 @@ plugins {
     id "idea"
 }
 
+def encoding = 'UTF-8'
 group 'de.tecipe'
 
 java {
@@ -14,6 +15,11 @@ java {
 
 repositories {
     mavenCentral()
+}
+
+patchPluginXml {
+    pluginDescription "${file('description.html').getText(encoding)}"
+            .replace("RELEASE_DATETIME", buildTime())
 }
 
 intellij {

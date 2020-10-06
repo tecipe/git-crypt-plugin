@@ -2,7 +2,7 @@
     <id>de.tecipe</id>
     <name>git-crypt</name>
     <version>XXXX</version>
-    <vendor email="support@tecipe.de" url="http://www.tecipe.de">Tecipe</vendor>
+    <vendor email="info@tecipe.de" url="http://www.tecipe.de">Tecipe</vendor>
 
     <description><![CDATA[
     <p>This Intellij IDEA Plugin makes life with git-crypt way better </p>
