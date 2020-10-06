@@ -16,6 +16,11 @@ repositories {
     mavenCentral()
 }
 
+patchPluginXml {
+    pluginDescription "${file('description.html').getText(encoding)}"
+            .replace("RELEASE_DATETIME", buildTime())
+}
+
 intellij {
     version '2020.2'
     plugins 'git4idea'
