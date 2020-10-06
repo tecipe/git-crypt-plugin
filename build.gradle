@@ -1,10 +1,11 @@
 plugins {
-    id "org.jetbrains.intellij" version "0.4.21"
+    id "org.jetbrains.intellij" version "0.5.0"
     id "java-library"
     id "io.freefair.lombok" version "5.1.1"
     id "idea"
 }
 
+apply plugin: 'org.jetbrains.intellij'
 def encoding = 'UTF-8'
 group 'de.tecipe'
 
@@ -19,7 +20,6 @@ repositories {
 
 patchPluginXml {
     pluginDescription "${file('description.html').getText(encoding)}"
-            .replace("RELEASE_DATETIME", buildTime())
 }
 
 intellij {
