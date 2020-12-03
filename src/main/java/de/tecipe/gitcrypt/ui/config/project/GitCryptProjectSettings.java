@@ -13,7 +13,7 @@ import org.jdom.Element;
 @State(
   name = "GitCryptProjectSettings",
   storages = {
-    @Storage("/git-crypt-project.xml")
+    @Storage("git-crypt-project.xml")
   }
 )
 @Getter

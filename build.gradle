@@ -1,5 +1,5 @@
 plugins {
-    id "org.jetbrains.intellij" version "0.5.0"
+    id "org.jetbrains.intellij" version "0.6.5"
     id "java-library"
     id "io.freefair.lombok" version "5.1.1"
     id "idea"
@@ -10,8 +10,8 @@ def encoding = 'UTF-8'
 group 'de.tecipe'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 repositories {
@@ -23,7 +23,7 @@ patchPluginXml {
 }
 
 intellij {
-    version '2020.2'
+    version '2020.3'
     plugins 'git4idea'
 }
 
