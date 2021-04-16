@@ -1,8 +1,11 @@
 package de.tecipe.gitcrypt.ui;
 
+import com.intellij.ide.DataManager;
 import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;
+import com.intellij.openapi.actionSystem.DataContext;
+import com.intellij.openapi.actionSystem.impl.SimpleDataContext;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.ListPopup;
 import com.intellij.openapi.util.Conditions;
@@ -12,12 +15,15 @@ import com.intellij.util.Consumer;
 import de.tecipe.gitcrypt.Utils;
 import de.tecipe.gitcrypt.ui.config.application.GitCryptApplicationSettings;
 import de.tecipe.gitcrypt.ui.config.application.IconOptions;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import java.awt.event.MouseEvent;
+import org.jetbrains.concurrency.Promise;
 
 public class GitCryptWidgetPresentation implements StatusBarWidget.MultipleTextValuesPresentation {
   private Project project;
@@ -38,8 +44,8 @@ public class GitCryptWidgetPresentation implements StatusBarWidget.MultipleTextV
     if (!Utils.isGitCryptPathConfigured()) {
       Notifications.Bus.notify(new Notification("git-crypt", "git-crypt warning", "No path set to your git-crypt installation, some actions are disabled until its configured", NotificationType.WARNING));
     }
-
-    return new GitCryptWidgetPopup("git-crypt", rootActions, this.project, Conditions.alwaysTrue());
+    DataContext dataContext = DataManager.getInstance().getDataContext();
+    return new GitCryptWidgetPopup("git-crypt", rootActions, dataContext, Conditions.alwaysTrue());
   }
 
   @Nullable
