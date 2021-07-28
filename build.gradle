@@ -23,7 +23,7 @@ patchPluginXml {
 }
 
 intellij {
-    version '2021.1'
+    version '2021.2'
     plugins 'git4idea'
 }
 
