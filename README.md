@@ -2,6 +2,10 @@
 
 This Intellij IDEA Plugin makes life with git-crypt way better 
 
+## Jetbrains Marketplace
+
+You can find this plugin here: https://plugins.jetbrains.com/plugin/14997-git-crypt
+
 ## How to use it
 
 ### Prerequisite
@@ -39,4 +43,3 @@ Unluckily Git-crypt has a bug where encrypted files get corrupted when unlocked 
 If you try to revert the wrong encrypted files you will get a filter-error because the key is also needed to reverse the correct file.  
 To solve this problem you have to set the correct key in the preferences and force the key into the .git directory with the `git-crypt force key` feature.  
 After that you can revert the process because now the right key is used for the filter.
-
